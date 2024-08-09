@@ -213,7 +213,7 @@ while isNotConn:
         isNotConn = False
     except Exception as e:
         logging.error(str(e))
-        time.sleep(10)
+        time.sleep(1000)
 
 while 1:
     time.sleep(10)
