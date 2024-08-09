@@ -12,3 +12,7 @@ test.py
 .DS_Store
 
 src/config_test.py
+src/config.py
+src/data/channels.json
+
+venv/
