@@ -112,8 +112,8 @@ def SendGroupped(client, peer, grupped_ids, MyChannel):
             from_peer = peer,
             id = grupped_ids,
             to_peer = MyChannel,
-            with_my_score = True,
-            grouped = True
+            with_my_score = True#,
+            #grouped = True
         ))
     return grupped_ids
 
