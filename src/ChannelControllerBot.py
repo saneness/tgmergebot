@@ -28,7 +28,8 @@ def AddChannel(key):
 
 def DeleteChannel(key):
     channels = sf.OpenJson(name= "channels")
-    
+    if '/' not in key:
+        key = 'https://t.me/' + key
     if key in channels:
         channels.pop(key, None)
         sf.SaveJson(name= "channels", data=channels)
@@ -171,7 +172,7 @@ class Bot(telepot.helper.ChatHandler):
                         if (result):
                             bot.sendMessage(chat_id, "Successful delete %s" % command[1])
                         else:
-                            bot.sendMessage(chat_id, "Channel %s allready unfollowed" % command[1])
+                            bot.sendMessage(chat_id, "Channel %s already unfollowed" % command[1])
 
                     elif command[0] == '/addrule':
                             input_text = CollectOtherText(command[1:len(command)])
